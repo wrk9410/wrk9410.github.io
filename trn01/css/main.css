@@ -32,3 +32,9 @@
     font-size: 19px;
     font-weight: 500;
 }
+
+/* 메인비주얼 */
+.main_visual {
+    height: 600px;
+    background: url(../img/main_slider01.jpg) no-repeat center top/cover;
+}
