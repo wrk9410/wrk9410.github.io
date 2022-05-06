@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover 02</title>
+    <link rel="stylesheet" href="/trn01_0504/css/reset.css">
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        section h2 {
+            font-size: 21px;
+            font-weight: 500;
+            margin: 0 0 30px 0;
+        }
+
+        section h2::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: #f00;
+            margin: 20px auto;
+            /* 박스 가운데로 오게하기 */
+        }
+
+        section p {
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0 0 30px 0;
+        }
+
+        section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        section .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .content .inbox {
+            overflow: hidden;
+        }
+
+        .content figure img {
+            transition: 1s;
+        }
+
+        .content figure:hover img {
+            transform: scale(2);
+            /* hover 시 이미지 커지게 하기 */
+            transition: 0.5s;
+        }
+
+        .con02 figure {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .con02 figure:hover a {
+            bottom: 0;
+        }
+
+        .con02 figure a {
+            position: absolute;
+            right: 0;
+            bottom: -38px;
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); (x축 비율, y축 비율)*/
+            /* box의 중심축을 가운데로 만드는 공식, 팝업창 만들 때의 공식 */
+
+            /* opacity: 0; */
+            /* .con02 figure a의 글자를 투명하게 */
+            /* visibility: hidden; */
+            /* .con02 figure a의 글자에 커서 변경이 사라지게(공간의 놔두고 커서도 글자도 안보이게 하기*/
+            transition: 0.5s;
+            border: 1px solid #333;
+            background: #fff;
+            padding: 10px;
+
+        }
+
+        .con02 figure:hover a {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .con03 .inbox {
+            position: relative;
+        }
+
+        .con03 .inbox::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            /* 보통의 box에서는 height가 먹지 않음 */
+            background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            transition: 0.5s;
+            /* transition 뒤쪽은 딜레이 시간 */
+            box-sizing: border-box;
+            /* 넘쳤던 걸 없애는 것 */
+            opacity: 0;
+        }
+
+        .con03 .inbox::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            /* 보통의 box에서는 height가 먹지 않음 */
+            background: rgba(0, 0, 0, 0.25);
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+            transition: 0.5s 0.5s;
+            box-sizing: border-box;
+            /* 넘쳤던 걸 선을 없애는 것 */
+            opacity: 0;
+        }
+
+        .con03 .inbox:hover::before,
+        .con03 .inbox:hover::after {
+            /* before, after에 *가 css에 종속되지않음 */
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur sit laborum ex voluptates! Voluptates
+            officia tenetur laborum aliquam sequi sint accusantium saepe repellendus corrupti, iure, sunt fugiat nobis.
+            Quam!
+        </p>
+        <div class="container">
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s011.jpg" alt="">
+                </div>
+                <a href=""></a>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s012.jpg" alt="">
+                </div>
+                <a href="">more</a>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s013.jpg" alt="">
+                </div>
+                <a href="">more</a>
+            </figure>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="con02">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur sit laborum ex voluptates! Voluptates
+            officia tenetur laborum aliquam sequi sint accusantium saepe repellendus corrupti, iure, sunt fugiat nobis.
+            Quam!
+        </p>
+        <div class="container">
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s011.jpg" alt="">
+                </div>
+                <a href="">
+                    <i class="xi-cart"></i>
+                </a>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s012.jpg" alt="">
+                </div>
+                <a href="">
+                    <i class="xi-cart"></i>
+                </a>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s013.jpg" alt="">
+                </div>
+                <a href="">
+                    <i class="xi-cart"></i>
+                </a>
+            </figure>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="con03">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur sit laborum ex voluptates! Voluptates
+            officia tenetur laborum aliquam sequi sint accusantium saepe repellendus corrupti, iure, sunt fugiat nobis.
+            Quam!
+        </p>
+        <div class="container">
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s011.jpg" alt="">
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s012.jpg" alt="">
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./trn01_0504/img/main_s013.jpg" alt="">
+                </div>
+            </figure>
+        </div>
+    </section>
+</body>
+
+</html>

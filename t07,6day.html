@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover 01</title>
+    <style>
+        /* style은 title 아래에 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+        }
+
+        nav {
+            position: relative;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            z-index: 999;
+        }
+
+        nav>ul {
+            display: flex;
+            justify-content: center;
+            /* box를 가운데로 */
+            gap: 30px;
+            text-align: center;
+            /* box 안의 내용을 가운데로 */
+        }
+
+        nav>ul>li {
+            /* 다단메뉴 제작 시 자식 관계 확실하게 하여됨 */
+            position: relative;
+            line-height: 40px;
+        }
+
+        nav>ul>li ul {
+            /* smenu 떠오르게 하기 */
+            position: absolute;
+            top: 40px;
+            left: 0;
+            /*  display: none; */
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            /* background: #ff0; */
+            z-index: 999;
+            /* z를 제일 위로 */
+        }
+
+        nav:hover>ul>li ul {
+            height: 180px;
+        }
+
+        nav::before {
+            position: absolute;
+            top: 41px;
+            left: 0;
+            content: "";
+            /* before, after conent 없을 경우 미작동 */
+            width: 100%;
+            height: 0;
+            background: #ff0;
+            transition: 0.5s;
+        }
+
+        nav:hover::before {
+            height: 180px;
+        }
+
+        .visual {
+            position: relative;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 이름을 지어주는 것, 변수랑 비슷한 개념인 것 같음 -->
+
+    <h1>다단메뉴</h1><!-- ul>li*5>a{menu0$}+ul>li*4>a{smenu0$} -->
+    <nav>
+        <!-- nav의 before를 할 경우 뜨는 위치 -->
+        <ul>
+            <li>
+                <a href="">menu01</a>
+                <ul>
+                    <!-- hover시 메뉴 뜨게하기위해서는 smenu가 떠올라야 됨 -->
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu02</a></li>
+                    <li><a href="">smenu03</a></li>
+                    <li><a href="">smenu04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu02</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu02</a></li>
+                    <li><a href="">smenu03</a></li>
+                    <li><a href="">smenu04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu03</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu02</a></li>
+                    <li><a href="">smenu03</a></li>
+                    <li><a href="">smenu04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu04</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu02</a></li>
+                    <li><a href="">smenu03</a></li>
+                    <li><a href="">smenu04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu05</a>
+                <ul>
+                    <li><a href="">smenu01</a></li>
+                    <li><a href="">smenu02</a></li>
+                    <li><a href="">smenu03</a></li>
+                    <li><a href="">smenu04</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="visual">
+        slogan
+    </section>
+    </div>
+</body>
+
+</html>

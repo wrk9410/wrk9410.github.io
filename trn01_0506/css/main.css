@@ -1,0 +1,813 @@
+.container {
+    display: flex;
+    /* 박스는 기본 세로지만, flex를 사용 시 가로 정렬로 바뀜 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .top_banner {
+    border-bottom: 1px solid #ddd;
+    line-height: 40px;
+}
+
+.header .top_banner span {
+    margin: 0 0 0 auto;
+}
+
+.header .top_banner a {
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 30px;
+    line-height: 90px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* 메인비주얼 */
+.main_visual {
+    position: relative;
+    height: 600px;
+    background: url(../img/main_slider01.jpg) no-repeat center top/cover;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    top: 100px;
+    right: 600px;
+
+}
+
+.main_slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+
+}
+
+.main_visual h3 {
+    /* font-size: 60px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    color: #00f; */
+    font-size: 90px;
+    font-weight: 900;
+    /* 슬라이드 텍스트 굵기 조정 */
+    color: #fff;
+    text-shadow: 1px 0 3px rgb(255 255 255 / 25%);
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+    color: transparent;
+    -webkit-background-clip: text;
+    line-height: 1.4;
+}
+
+.main_visual strong {
+    display: block;
+    margin: 0 0 20px 0;
+    color: #fd7e14;
+
+}
+
+.main_slider .slick-dots {
+    /* Ul */
+    padding: 20px 0 0 0;
+}
+
+.main_slider .slick-dots li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    width: 80px;
+    height: 4px;
+    background: #333;
+}
+
+.main_slider .slick-dots li.slick-active {
+    background: #fd7e14;
+}
+
+.main_slider .slick-dots button {
+    display: none;
+}
+
+.main_banner {
+    transform: translateY(-50%);
+}
+
+
+.main_banner figure {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.main_banner .container {
+    height: 220px;
+    align-items: flex-end;
+}
+
+.main_banner figure:hover {
+    height: 220px;
+}
+
+.main_banner figure:nth-child(1) {
+    background: #e7948f;
+}
+
+
+.main_banner figure:nth-child(2) {
+    background: #f3ca4f;
+}
+
+.main_banner figure:nth-child(3) {
+    background: #337688;
+}
+
+.main_banner figure:nth-child(4) {
+    background: #6fa376;
+}
+
+.main_banner figure a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100px;
+    height: 120px;
+    font-size: 13px;
+}
+
+.main_banner figure:nth-child(1) a {
+    background: url(../img/icon_set_w.png) no-repeat 0 0;
+    transition: 0.5s;
+}
+
+/* .main_banner figure:nth-child(1):hover a {
+    background: url(../img/icon_set_w.png) no-repeat -300px 0;
+
+} */
+
+.main_banner figure:nth-child(2) a {
+    background: url(../img/icon_set_w.png) no-repeat -100px 0;
+    transition: 0.5s;
+}
+
+.main_banner figure:nth-child(3) a {
+    background: url(../img/icon_set_w.png) no-repeat -200px 0;
+    transition: 0.5s;
+}
+
+.main_banner figure:nth-child(4) a {
+    background: url(../img/icon_set_w.png) no-repeat -300px 0;
+    transition: 0.5s;
+}
+
+/* .main_banner figure strong {} */
+
+
+
+.main_banner .customer {
+    position: relative;
+    /* 기준점 잡기, 미설정 시 한없이 위로가서 사라짐 */
+    flex: 2;
+    text-align: right;
+    background: #ddd;
+    padding: 50px 30px 65px 0;
+    /* border: 20px solid transparent; */
+}
+
+.main_banner .customer a {
+    display: block;
+    margin: 0 0 15px 0;
+    font-size: 38px;
+    color: #369;
+    font-weight: 700;
+}
+
+.main_banner .customer i {
+    position: absolute;
+    top: -29px;
+    right: 30px;
+    color: #fff;
+    background: #e7948f;
+    font-size: 38px;
+    padding: 10px;
+    border-radius: 50%;
+    /* border-radius : 모서리의 부분의 크기, 기본 사각 */
+}
+
+.main_link {
+    padding: 0 0 100px 0;
+    background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);
+    /* linear-gradient : 그라데이션으로 활용가능 */
+    /* 앞의 숫자가 더 클 경우 선이 생긴다. */
+}
+
+.main_link h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.main_link h2::before {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    vertical-align: middle;
+    /* 중간으로 옮기기 */
+    margin: 0 10px;
+}
+
+.main_link h2::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    vertical-align: middle;
+    /* 중간으로 옮기기 */
+    margin: 0 10px;
+}
+
+
+.main_link .container {
+    gap: 30px;
+    /* 이미지 사이의 거리 벌리기 */
+}
+
+.main_link li::before {
+    /* 리스트 내 아이콘 넣기 */
+    content: "\ea10";
+    font-family: xeicon !important;
+}
+
+.main_link figure {
+    position: relative;
+    /* relative : 포지션의 기준이 되어라 */
+    flex: 1;
+    border-radius: 50px 0 0 0;
+    /* 이미지가 아니라 박스가 구겨진 것 */
+    overflow: hidden;
+    /* 박스 밖으로 넘어간 것을 삭제 */
+}
+
+.main_link img {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.main_link h3 {
+    font-size: 23px;
+    /* 짝수보단 홀수 픽셀을 주는 것이 덜 깨짐 */
+    margin: 0 0 30px 0;
+
+}
+
+.main_link h3::after {
+    /* 선택자 뒤에 콘텐츠를 넣는 것*/
+    content: "";
+    display: block;
+    /* 선택자와 거리가 멀어 공간의 끝으로 빠진다 */
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    margin: 15px 0;
+}
+
+/* .main_link h3::before {
+    선택자 앞에 콘텐츠를 넣는 것
+    content: "111";
+} */
+
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.footer ul {
+    margin: 10px 0;
+    /* 박스들의 간격을 벌림 */
+}
+
+.footer ul>li {
+    display: inline-block;
+    /* flex는 부모에게 주고, inline-block 자기 자신 */
+}
+
+.footer ul>li~li::before {
+    /* ~ : 밑에 있는 형제를 선택, 본인은 빠짐 */
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #333;
+    margin: 0 15px;
+    vertical-align: middle;
+
+}
+
+.main_link figure a {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 60px;
+    /* 떠서 쪼그라드는 것은 width가 가능 */
+    height: 60px;
+    background: rgba(243, 202, 79, 0.5);
+    /* background만 투명하게 설정, rgb 옆에 a를 붙혀 투명도 설정 */
+    text-align: center;
+    line-height: 60px;
+    /* 높이를 기준으로 잡을 수 있는지 궁금 */
+    color: #fff;
+    border-radius: 50%;
+    text-transform: uppercase;
+    /* opacity: 0.5; */
+    /* 모든 자식들의 투명도 설정 */
+    transition: 0.5s;
+}
+
+.main_link figure a:hover {
+    background: rgba(243, 202, 79, 1);
+    border-radius: 5px;
+}
+
+.footer address {
+    font-style: normal;
+}
+
+
+/* 
+
+
+
+
+
+
+작성자 : 길대수
+spt : 장예림, 장영빈
+2022.05.04
+responsive 768px
+
+
+
+
+
+
+*/
+
+
+@media (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .header .top_banner {
+        display: none;
+        border-bottom: 1px solid #ddd;
+        line-height: 40px;
+    }
+
+    .header .top_banner span {
+        margin: 0 0 0 auto;
+    }
+
+    .header .top_banner a {
+        margin: 0 0 0 10px;
+        padding: 0 10px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .header h1 {
+        padding: 0 15px;
+    }
+
+    .header .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        width: calc(100% - 90px);
+        height: 100vh;
+        margin: 0 0 0 auto;
+        border-right: 1px solid #333;
+        z-index: 999;
+        /* 메뉴를 제일 위로 올리는 것 */
+        transition: 0.5s;
+    }
+
+    .header .gnb.on {
+        left: 0;
+    }
+
+    .header .gnb>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 50px 15px;
+        line-height: 40px;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .header .gnb>ul a {
+        display: block;
+        /* 여기서는 펴주는 것 */
+        border-bottom: 1px solid #ddd;
+        /* 아래쪽에 선 그어주기 */
+    }
+
+    .main_visual {
+        position: relative;
+        height: calc(100vh - 90px);
+        /* 배경 사진을 스크롤 제일 위까지만 나오게 설정 */
+        background: url(../img/main_slider01.jpg) no-repeat right top/cover;
+        /* right로 설정하여 배경을 땡겨옴 */
+    }
+
+    .main_visual .slogan {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 600px;
+    }
+
+    .main_slider {
+        position: absolute;
+        top: auto;
+        bottom: 150px;
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        /* absolute에서 완전히 펴줄 때는 auto가 아니라 100% */
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .main_slider .itm {
+        height: 300px;
+    }
+
+    .main_visual h3 {
+        font-size: 11vw;
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 1px 0 3px rgb(255 255 255 / 25%);
+        background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+        color: transparent;
+        -webkit-background-clip: text;
+        line-height: 1.4;
+    }
+
+    .main_visual strong {
+        display: block;
+        margin: 0 0 20px 0;
+        color: #fd7e14;
+
+    }
+
+    .main_slider .slick-dots {
+        text-align: center;
+        padding: 20px 0 0 0;
+    }
+
+    .main_slider .slick-dots li {
+        display: inline-block;
+        margin: 0 5px 0 0;
+        width: 10px;
+        height: 10px;
+        background: #333;
+    }
+
+    .main_slider .slick-dots li.slick-active {
+        background: #fd7e14;
+    }
+
+    .main_slider .slick-dots button {
+        display: none;
+    }
+
+    .main_banner {
+        transform: translateY(0);
+    }
+
+    .main_banner figure {
+        display: flex;
+        flex: 1 1 50%;
+        text-align: center;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        transition: 0.5s;
+    }
+
+    .main_banner .container {
+        height: auto;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main_banner figure:hover {
+        height: 200px;
+    }
+
+    .main_banner figure:nth-child(1) {
+        background: #e7948f;
+    }
+
+
+    .main_banner figure:nth-child(2) {
+        background: #f3ca4f;
+    }
+
+    .main_banner figure:nth-child(3) {
+        background: #337688;
+    }
+
+    .main_banner figure:nth-child(4) {
+        background: #6fa376;
+    }
+
+    .main_banner figure a {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100px;
+        height: 120px;
+        font-size: 13px;
+    }
+
+    .main_banner figure:nth-child(1) a {
+        background: url(../img/icon_set_w.png) no-repeat 0 0;
+        transition: 0.5s;
+    }
+
+    .main_banner figure:nth-child(2) a {
+        background: url(../img/icon_set_w.png) no-repeat -100px 0;
+        transition: 0.5s;
+    }
+
+    .main_banner figure:nth-child(3) a {
+        background: url(../img/icon_set_w.png) no-repeat -200px 0;
+        transition: 0.5s;
+    }
+
+    .main_banner figure:nth-child(4) a {
+        background: url(../img/icon_set_w.png) no-repeat -300px 0;
+        transition: 0.5s;
+    }
+
+    .main_banner .customer {
+        position: relative;
+        flex: 2;
+        text-align: right;
+        background: #ddd;
+        padding: 50px 30px 65px 0;
+    }
+
+    .main_banner .customer a {
+        display: block;
+        margin: 0 0 15px 0;
+        font-size: 38px;
+        color: #369;
+        font-weight: 700;
+    }
+
+    .main_banner .customer i {
+        position: absolute;
+        top: -29px;
+        right: 30px;
+        color: #fff;
+        background: #e7948f;
+        font-size: 38px;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .main_link {
+        padding: 0 0 100px 0;
+        background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);
+    }
+
+    .main_link h2 {
+        text-align: center;
+        margin: 0 0 50px 0;
+    }
+
+    .main_link h2::before {
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 1px;
+        background: #f00;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+    .main_link h2::after {
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 1px;
+        background: #f00;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+
+    .main_link .container {
+        padding: 50px 15px;
+        gap: 30px;
+    }
+
+    .main_link li::before {
+        content: "\ea10";
+        font-family: xeicon !important;
+    }
+
+    .main_link figure {
+        position: relative;
+        flex: 1;
+        border-radius: 50px 0 0 0;
+        overflow: hidden;
+    }
+
+    .main_link img {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    .main_link h3 {
+        font-size: 23px;
+        margin: 0 0 30px 0;
+
+    }
+
+    .main_link h3::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 1px;
+        background: #f00;
+        margin: 15px 0;
+    }
+
+
+    .footer {
+        border-top: 1px solid #ddd;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .footer ul {
+        margin: 10px 0;
+        /* 박스들의 간격을 벌림 */
+    }
+
+    .footer ul>li {
+        display: inline-block;
+        /* flex는 부모에게 주고, inline-block 자기 자신 */
+        padding: 5px 10px;
+    }
+
+    .footer ul>li~li::before {
+        /* ~ : 밑에 있는 형제를 선택, 본인은 빠짐 */
+        content: "";
+        display: none;
+        width: 1px;
+        height: 13px;
+        background: #333;
+        margin: 0 15px;
+        vertical-align: middle;
+
+    }
+
+    .main_link figure a {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 60px;
+        /* 떠서 쪼그라드는 것은 width가 가능 */
+        height: 60px;
+        background: rgba(243, 202, 79, 0.5);
+        /* background만 투명하게 설정, rgb 옆에 a를 붙혀 투명도 설정 */
+        text-align: center;
+        line-height: 60px;
+        /* 높이를 기준으로 잡을 수 있는지 궁금 */
+        color: #fff;
+        border-radius: 50%;
+        text-transform: uppercase;
+        /* opacity: 0.5; */
+        /* 모든 자식들의 투명도 설정 */
+        transition: 0.5s;
+    }
+
+    .main_link figure a:hover {
+        background: rgba(243, 202, 79, 1);
+        border-radius: 5px;
+    }
+
+    .footer address {
+        font-style: normal;
+    }
+
+    .mopen {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        background: #ddd;
+    }
+
+    .mopen span {
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        /* width: 100%; */
+        height: 3px;
+        background: #333;
+    }
+
+    .mopen>span {
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        /* width: 100%; */
+        height: 3px;
+        background: #333;
+    }
+
+    .mopen span:nth-child(1) {
+        top: 5px;
+    }
+
+    .mopen span:nth-child(2) {
+        top: 13px;
+    }
+
+    .mopen span:nth-child(3) {
+        top: 13px;
+    }
+
+    .mopen span:nth-child(4) {
+        top: 21px;
+    }
+
+    /* .mopen span.on:nth-child(1) {
+        display: none;
+    }
+
+    .mopen span.on:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .mopen span.on:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .mopen span.on:nth-child(4) {
+        display: none;
+    } */
+
+    .mopen.on span:nth-child(1) {
+        display: none;
+    }
+
+    .mopen.on span:nth-child(2) {
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
+
+    .mopen.on span:nth-child(3) {
+        transform: rotate(-45deg);
+        transition: 0.5s;
+    }
+
+    .mopen.on span:nth-child(4) {
+        display: none;
+    }
+
+}
