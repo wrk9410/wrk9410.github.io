@@ -1,0 +1,49 @@
+1.
+float, 다단 메뉴(반응형 아님) 참고 자료
+https://sipossa.github.io/doc01/
+
+
+
+2.rem px
+ - html {font-size: (10)px;} : 폰트 사이즈 전체를 (값)으로 바꾸는 것
+ - body {font-size: (0.8)rem} : 폰트 사이즈를 (값)의 배로 바꾸는 것
+ - @media (max-width:768px) {
+	html {font-size: (10)px;}
+	body {font-size: (0.8)rem}
+	/* 주로 위에 처럼 사용 */
+}
+
+/* 전역변수? */
+ - 사용, :root { (선택 색상을 한 번에 바꾸기 위해 변수로 작성)
+	--bw-w:#fff
+}
+ - 이전, .bg-w { /* box 색상 변경 클래쓰에 담아둠 */
+	background:#fff
+}
+ - 적용, h2{background:var()}
+
+
+
+3.git, vscode에서 바로 저장
+ 1.구글 'git' 검색 후 다운로드 (따로 더 검색 해보아야 할 것 같음)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
